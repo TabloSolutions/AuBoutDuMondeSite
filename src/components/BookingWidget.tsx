@@ -15,7 +15,8 @@ function BookingWidgetInner() {
   const { restaurant } = useRestaurant()
   const [open, setOpen] = useState(false)
 
-  const primaryColor = restaurant?.primary_color ?? '#1a3a6b'
+  const primaryColor = restaurant?.primary_color ??
+    getComputedStyle(document.documentElement).getPropertyValue('--primary').trim()
 
   const handleClose = () => setOpen(false)
 
