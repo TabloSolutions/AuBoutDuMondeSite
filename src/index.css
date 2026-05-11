@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Geist:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Au Bout du Monde — Palette Sombre & Dorée */
+    --background: 220 15% 9%;
+    --foreground: 40 25% 92%;
+
+    --card: 220 15% 12%;
+    --card-foreground: 40 25% 92%;
+
+    --popover: 220 15% 12%;
+    --popover-foreground: 40 25% 92%;
+
+    --primary: 42 58% 52%;
+    --primary-foreground: 220 15% 9%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 40 25% 92%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 40 15% 58%;
+
+    --accent: 42 72% 64%;
+    --accent-foreground: 220 15% 9%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 40 25% 92%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 20%;
+    --ring: 42 58% 52%;
+
+    --radius: 0.75rem;
+
+    --font-sans: 'Geist', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+
+    --shadow-elegant: 0 10px 40px -10px hsl(42 58% 52% / 0.25);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    @apply tracking-tight;
+  }
+}
+
+.glass {
+  @apply backdrop-blur-md bg-white/5 border border-white/10;
+}
+
+.glass-light {
+  @apply backdrop-blur-md bg-white/10 border border-white/20;
+}
+
+.shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Séparateur doré */
+.gold-divider {
+  @apply w-24 h-px bg-primary mx-auto;
+}
