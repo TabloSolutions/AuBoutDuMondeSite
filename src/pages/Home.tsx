@@ -3,6 +3,9 @@ import { useNavigate } from '@tanstack/react-router'
 import { ChevronRight, Sparkles, MapPin, Coffee } from 'lucide-react'
 import { useEffect, useRef } from 'react'
 
+const openWidget = () =>
+  document.querySelector<HTMLButtonElement>('[aria-label="Réserver une table"]')?.click()
+
 export function HomePage() {
   const navigate = useNavigate()
   const observerRef = useRef<IntersectionObserver | null>(null)
@@ -56,7 +59,7 @@ export function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
                 size="lg"
-                onClick={() => navigate({ to: '/booking' })}
+                onClick={openWidget}
                 className="rounded-full px-10 h-14 text-base font-medium shadow-xl hover:scale-105 transition-transform bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 Réserver une table
@@ -257,7 +260,7 @@ export function HomePage() {
             </p>
             <Button
               size="lg"
-              onClick={() => navigate({ to: '/booking' })}
+              onClick={openWidget}
               className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-14 h-16 text-lg font-medium shadow-2xl hover:scale-105 transition-all"
             >
               Réserver en ligne
