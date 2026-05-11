@@ -70,8 +70,7 @@ export function BookingSteps({
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [confirmedBooking, setConfirmedBooking] = useState<BookingInfo | null>(null)
 
-  const primaryColor   = restaurant?.primary_color ??
-    getComputedStyle(document.documentElement).getPropertyValue('--primary').trim()
+  const primaryColor   = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim()
   const restaurantName = 'Votre Restaurant'
   const dateStr        = format(date, 'yyyy-MM-dd')
   const todayStr       = format(new Date(), 'yyyy-MM-dd')
