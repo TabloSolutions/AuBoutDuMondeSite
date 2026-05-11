@@ -52,13 +52,13 @@ export function Footer() {
           <h4 className="font-serif text-lg font-bold text-foreground">Horaires</h4>
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
             {[
-              { jour: 'Lundi',    heure: 'Fermé' },
-              { jour: 'Mardi',    heure: '10:00 – 22:30' },
-              { jour: 'Mercredi', heure: '10:00 – 22:30' },
-              { jour: 'Jeudi',    heure: '10:00 – 22:30' },
-              { jour: 'Vendredi', heure: '10:00 – 23:30' },
-              { jour: 'Samedi',   heure: '10:00 – 23:30' },
-              { jour: 'Dimanche', heure: '10:00 – 22:00' },
+              { jour: 'Lundi',    heure: '09:30 – 00:00' },
+              { jour: 'Mardi',    heure: '09:30 – 00:00' },
+              { jour: 'Mercredi', heure: '09:30 – 00:00' },
+              { jour: 'Jeudi',    heure: '09:30 – 00:00' },
+              { jour: 'Vendredi', heure: '09:30 – 00:00' },
+              { jour: 'Samedi',   heure: '09:30 – 00:00' },
+              { jour: 'Dimanche', heure: '09:30 – 00:00' },
             ].map(({ jour, heure }) => (
               <div key={jour} className="flex justify-between border-b border-border/40 pb-1">
                 <span className={heure === 'Fermé' ? 'opacity-40' : ''}>{jour}</span>

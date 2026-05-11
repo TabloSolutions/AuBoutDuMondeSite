@@ -40,7 +40,7 @@ export function ContactPage() {
         <div className="glass rounded-[2rem] p-10 md:p-14 shadow-elegant text-center mb-10 animate-fade-in delay-100">
           <p className="text-muted-foreground text-sm uppercase tracking-widest font-semibold mb-3">Nous appeler</p>
           <p className="text-4xl md:text-5xl font-bold mb-2 tracking-widest tabular-nums">02 XX XX XX XX</p>
-          <p className="text-muted-foreground mb-8">Du mardi au dimanche · Service midi & soir · Lundi fermé</p>
+          <p className="text-muted-foreground mb-8">Tous les jours · 09h30 – 00h00</p>
           <a
             href="tel:0251935468"
             className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 rounded-full text-lg font-semibold shadow-elegant hover:opacity-90 transition-opacity"
